@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "f180732c-c7ff-4704-ae77-44e4425e8038",
+		"name": "lab7_nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26253067"
+	},
+	"item": [
+		{
+			"name": "getTopTrails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getTopTrails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getTopTrails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addReview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"osickaer\",\r\n    \"review\": \"this trail is so cool\",\r\n    \"rating\": \"5.5\",\r\n    \"image_url\": \"https://dummyimage.com/162x200.png/dddddd/000000\",\r\n    \"image_caption\": \"this is a 162x200 square\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addReview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addReview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_review",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"review_id\": 91,\r\n    \"review\": \"this trail sucks\",\r\n    \"rating\": \"7\",\r\n    \"image_id\": 78,\r\n    \"image_url\": \"https://dummyimage.com/162x200.png/dddddd/999999\",\r\n    \"image_caption\": \"this is a new image\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete_review?rating=5.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete_review"
+					],
+					"query": [
+						{
+							"key": "review_id",
+							"value": "69",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "osickaer",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "5.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_trails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/search_trails?name=&location=&length=6.6&elevation_gain=2224&difficulty&avg_rating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"search_trails"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						},
+						{
+							"key": "location",
+							"value": ""
+						},
+						{
+							"key": "length",
+							"value": "6.6"
+						},
+						{
+							"key": "elevation_gain",
+							"value": "2224"
+						},
+						{
+							"key": "difficulty",
+							"value": null
+						},
+						{
+							"key": "avg_rating",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_trail_reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/search_trail_reviews?trail_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"search_trail_reviews"
+					],
+					"query": [
+						{
+							"key": "trail_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
